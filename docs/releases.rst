@@ -6,7 +6,7 @@ v6 Breaking Changes Summary
 
 .. towncrier release notes start
 
-web3.py v6.15.1 (2024-02-05)
+web3.py v6.15.2 (2024-02-05)
 ----------------------------
 
 Bugfixes

@@ -141,12 +141,7 @@ def to_hexbytes(
     extra_bytes = len(result) - num_bytes
     if extra_bytes == 0 or (variable_length and extra_bytes < 0):
         return result
-    elif all(byte == 0 for byte in result[:extra_bytes]):
-        return HexBytes(result[extra_bytes:])
-    else:
-        raise ValueError(
-            f"The value {result!r} is {len(result)} bytes, but should be {num_bytes}"
-        )
+    return HexBytes(result[extra_bytes:])
 
 
 def is_attrdict(val: Any) -> bool:
